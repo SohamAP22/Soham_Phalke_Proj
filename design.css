@@ -1,0 +1,240 @@
+body, html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+.hero-image {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("style.png"); */
+  background: linear-gradient(to left, #c381ed 20%, hsla(48, 96%, 47%, 0.712) 30%, #000000 50%);
+  height: 110%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex; /* Use flexbox */
+    justify-content: space-around;
+}
+
+
+
+#image_hero {
+    width: 600px;     height: 600px; 
+    /* background-color: #f0f0f0;  */
+    /* border: 1px solid #000;  */
+    padding: 20px; /* Add padding inside the box */
+    box-sizing: border-box; /* Include padding and border in the box's total width and height */
+  }
+
+  #text_hero {
+    width: 600px;
+    height: 600px; 
+    /* background-color: #f0f0f0;  */
+    /* border: 1px solid #000; */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; 
+  }
+
+
+
+.project:hover  {
+    color: #FFD700;
+}
+#login:hover{
+    color:white;
+}
+
+
+/* Define a gradient background */
+.gradient-bg {
+    background: linear-gradient(to left, #c381ed 30%, hsla(48, 96%, 47%, 0.712));
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background 0.3s ease-in-out;
+}
+
+#gradient-stat{
+    background: linear-gradient(to left, #c381ed, hsla(48, 96%, 47%, 0.712));
+
+}
+
+/* #strong{
+    color: linear-gradient(to left, #c381ed, hsla(48, 96%, 47%, 0.712));
+} */
+
+.color-grad{
+    font-size: 72px;
+    background: -webkit-linear-gradient(#c381ed, hsla(48, 96%, 47%, 0.712));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#animate{
+   
+        --offset: 3px;
+        background: rgb(0, 0, 0);
+        border-radius: 50px;
+        position: relative;
+        height: 75px;
+        width: 400px;
+        max-width: 100%;
+        overflow: hidden;
+    
+}
+
+#animate a {
+    /* background: transparent; */
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    padding: 1.5rem;
+}
+
+
+#animate::before { 
+    content: '';
+    background: conic-gradient(transparent 270deg, white, transparent);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1;
+    width: 100%;
+    animation: rotate 2s linear infinite;
+}
+
+#animate::after {
+    content: '';
+    background: inherit;
+    border-radius: inherit;
+    position: absolute;
+    inset: var(--offset);
+    height: calc(100% - 2 * var(--offset));
+    width: calc(100% - 2 * var(--offset));
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+    }
+}
+
+
+/* Example of using hover effect */
+.gradient-bg:hover {
+    color: black;
+    background: linear-gradient(to left, hsla(48, 96%, 47%, 0.712),#c381ed );
+}
+
+#img_hero {
+    max-width: 500px;
+    max-height: 500px;
+   }
+
+.problems{
+    display: flex;
+    flex-direction: column;
+
+}
+   #prob_box{
+    display: flex;
+    flex-direction: row;
+    
+    
+    
+  }
+  
+  #prob_box > div {
+    height: 510px;
+    width: 600px;
+    display:flex;
+    flex-direction: column;
+    background-color: #f9e8fc;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 60px;
+    /* font-size: 20px; */
+    flex-basis: 7em;
+    transition: transform 0.4s ease-in-out;
+    
+  } 
+  
+  #prob_box > div:hover {
+    transform: scale(1.2); 
+  }
+
+
+  .slider {
+    height: 300px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  .slide-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(250px * 18);
+    -webkit-animation: scroll 10s linear infinite;
+    animation: scroll 10s linear infinite;
+  }
+  
+  @-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 9));
+      transform: translateX(calc(-250px * 9));
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 9));
+      transform: translateX(calc(-250px * 9));
+    }
+  }
+  
+  .slide {
+    height: 200px;
+    width: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px;
+    -webkit-perspective: 100px;
+    perspective: 100px;
+  }
+
+  #benefits{
+    height: 800px;
+    background-color: black;
+  }
